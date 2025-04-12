@@ -1,18 +1,21 @@
-function BookCard({ title, author, coverId }) {
-    const imageUrl = coverId
-      ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
-      : 'https://via.placeholder.com/100x150?text=No+Cover';
-  
-    return (
-      <div className="book-card">
-        <img src={imageUrl} alt={`Cover for ${title}`} className="cover" />
-        <div className="info">
-          <h3>{title}</h3>
-          <p>{author}</p>
-        </div>
+import { Link } from 'react-router-dom';
+
+const BookCard = ({ title, author, coverId }) => {
+  const bookId = title.replace(/\s+/g, '-'); // crude unique ID from title
+
+  return (
+    <Link to={`/details/${bookId}`} className="book-card">
+      <div style={{ padding: '1rem', border: '1px solid #ccc' }}>
+        <h3>{title}</h3>
+        <p><em>{author}</em></p>
+        {coverId ? (
+          <img src={`https://covers.openlibrary.org/b/id/${coverId}-M.jpg`} alt={title} />
+        ) : (
+          <p>No cover</p>
+        )}
       </div>
-    );
-  }
-  
-  export default BookCard;
-  
+    </Link>
+  );
+};
+
+export default BookCard;

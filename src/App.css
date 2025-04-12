@@ -18,24 +18,24 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 960px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
 .App {
   display: flex;
   justify-content: center;
-  padding: 17rem;
-  padding-top: 5rem;
+  padding: 20rem;
+  padding-top: 1rem;
   color: #4b2c46;
   background-color: #ffeef4;
 }
 
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #c71585;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 input, select {
@@ -52,7 +52,7 @@ input, select {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .book-card {
@@ -60,7 +60,7 @@ input, select {
   border: 1px solid #d8bfd8;
   border-radius: 16px;
   padding: 1rem;
-  width: 180px;
+  width: 210px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
   transition: transform 0.2s ease;
@@ -71,8 +71,8 @@ input, select {
 }
 
 .cover {
-  width: 100px;
-  height: 150px;
+  width: 10px;
+  height: 10px;
   object-fit: cover;
   margin-bottom: 0.5rem;
   border-radius: 6px;

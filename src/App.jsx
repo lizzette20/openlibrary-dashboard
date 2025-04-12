@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import BookCard from './components/BookCard';
+import ChartYearDist from './components/charts/ChartYearDist';
+import ChartTopAuthors from './components/charts/ChartTopAuthors';
+
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -114,6 +117,11 @@ function App() {
             />
           </div>
         </div>
+
+        <ChartYearDist books={filteredBooks} />
+        <ChartTopAuthors books={filteredBooks} />
+
+
 
         <div className="book-list">
           {filteredBooks.length === 0 && searchInput.length >= 3 && (
